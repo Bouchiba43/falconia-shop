@@ -1,0 +1,122 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "contact": "Contact",
+    "shopNow": "Shop Now"
+  },
+  "Hero": {
+    "premiumStreetwear": "Premium Streetwear",
+    "tagline": "Curated Streetwear. Delivered to Your Door.",
+    "shopNow": "Shop Now",
+    "ourStory": "Our Story",
+    "products": "Products",
+    "followers": "Followers",
+    "authentic": "Authentic"
+  },
+  "FeaturedProducts": {
+    "subtitle": "New Arrivals",
+    "title": "Featured Collection",
+    "description": "Hand-picked vintage and streetwear pieces, curated for the modern fashion enthusiast.",
+    "viewAll": "View All Products"
+  },
+  "Categories": {
+    "subtitle": "Browse",
+    "title": "Shop by Category",
+    "jackets": "Jackets",
+    "jacketsDesc": "Premium outerwear",
+    "hoodies": "Hoodies",
+    "hoodiesDesc": "Cozy streetwear",
+    "tshirts": "T-Shirts",
+    "tshirtsDesc": "Everyday essentials",
+    "pants": "Pants",
+    "pantsDesc": "Complete the look",
+    "explore": "Explore"
+  },
+  "About": {
+    "subtitle": "Our Story",
+    "title1": "Born from Passion,",
+    "title2": "Built for Style",
+    "paragraph1": "Falconia Shop started as a small Instagram page in Gafsa, Tunisia, driven by a passion for unique, high-quality streetwear and vintage fashion.",
+    "paragraph2": "What began as curating pieces for friends quickly grew into a community of over 3,000 fashion enthusiasts who trust us for premium, authentic clothing.",
+    "paragraph3": "Every piece in our collection is hand-selected for its quality, uniqueness, and style. From vintage Diesel denim to rare Nike finds, we bring the best of global streetwear to your doorstep.",
+    "delivery": "Nationwide Delivery",
+    "authenticLabel": "100% Authentic",
+    "packaging": "Secure Packaging",
+    "support": "24/7 Support"
+  },
+  "Testimonials": {
+    "subtitle": "Feedbacks",
+    "title": "What Our Customers Say",
+    "description": "Trusted by thousands of satisfied customers across Tunisia.",
+    "testimonial1": "The quality is incredible! I ordered a Diesel jacket and it arrived in perfect condition. Thank you Falconia!",
+    "testimonial2": "Best vintage shop in Tunisia. Fast delivery and customer service is top-notch. I recommend 100%.",
+    "testimonial3": "I found unique pieces I can't find anywhere else. The prices are reasonable for the quality."
+  },
+  "Instagram": {
+    "subtitle": "Follow Us",
+    "title": "@falconia00",
+    "description": "Join our community of 3,000+ followers for the latest drops, style inspiration, and exclusive offers.",
+    "followButton": "Follow @falconia00"
+  },
+  "Newsletter": {
+    "subtitle": "Stay Updated",
+    "title": "Get Early Access to New Drops",
+    "description": "Be the first to know about new arrivals, exclusive deals, and limited edition pieces. No spam, ever.",
+    "successTitle": "Welcome to the Falconia family! 🎉",
+    "successMessage": "You'll receive our next drop notification.",
+    "placeholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "disclaimer": "By subscribing, you agree to receive marketing emails."
+  },
+  "Footer": {
+    "brandDescription": "Curated vintage & streetwear pieces delivered across Tunisia. Premium quality, unique style.",
+    "quickLinks": "Quick Links",
+    "categories": "Categories",
+    "contactTitle": "Contact",
+    "copyright": "© {year} Falconia Shop. All rights reserved.",
+    "delivery": "Delivery across all of Tunisia 🇹🇳"
+  },
+  "Shop": {
+    "title": "Our Collection",
+    "description": "Hand-picked vintage and streetwear pieces, curated for the modern fashion enthusiast.",
+    "all": "All",
+    "newestFirst": "Newest First",
+    "priceLowHigh": "Price: Low to High",
+    "priceHighLow": "Price: High to Low",
+    "productCount": "{count} product{count, plural, one {} other {s}}",
+    "noProducts": "No products found in this category.",
+    "viewAll": "View all products"
+  },
+  "Product": {
+    "sale": "SALE",
+    "soldOut": "Sold Out",
+    "size": "Size",
+    "inStock": "In Stock",
+    "orderWhatsApp": "Order via WhatsApp",
+    "messageInstagram": "Message on Instagram",
+    "selectSize": "Please select a size first",
+    "orderMessage": "Hello! I'm interested in: {name} (Size: {size}) - {price}",
+    "orderSent": "Order request sent! We'll get back to you shortly.",
+    "relatedProducts": "You May Also Like",
+    "home": "Home",
+    "shop": "Shop",
+    "deliveryFeature": "🚚 Nationwide Delivery",
+    "authenticFeature": "✅ 100% Authentic",
+    "packagingFeature": "📦 Secure Packaging",
+    "supportFeature": "💬 24/7 Support"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "goHome": "Go Home",
+    "browseShop": "Browse Shop"
+  },
+  "Metadata": {
+    "siteTitle": "Falconia Shop — Premium Vintage & Streetwear | Tunisia",
+    "siteDescription": "Premium vintage & streetwear clothing. Curated fashion pieces delivered across Tunisia. Shop hoodies, jackets, tees & more.",
+    "shopTitle": "Shop All Products",
+    "shopDescription": "Browse our curated collection of vintage and streetwear clothing. Jackets, hoodies, tees, and more. Delivered across Tunisia."
+  }
+}

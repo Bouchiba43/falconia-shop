@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#e8e8e3"/>
+  <text x="400" y="480" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" fill="#737373" font-weight="600">FALCONIA</text>
+  <text x="400" y="520" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#999">Product Image</text>
+</svg>
