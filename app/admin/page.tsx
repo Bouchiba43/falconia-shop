@@ -25,6 +25,9 @@ export default function AdminPage() {
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [customCategories, setCustomCategories] = useState<string[]>([]);
+  const [newCategory, setNewCategory] = useState("");
+  const [showNewCategoryInput, setShowNewCategoryInput] = useState(false);
   const [formData, setFormData] = useState<ProductFormData>({
     name: "",
     price: 0,
@@ -35,6 +38,11 @@ export default function AdminPage() {
     featured: false,
     inStock: true,
   });
+
+  // Build unique category list from existing products + custom additions
+  const defaultCategories = ["Jackets", "Hoodies", "T-Shirts", "Pants"];
+  const productCategories = [...new Set(products.map((p) => p.category))];
+  const allCategories = [...new Set([...defaultCategories, ...productCategories, ...customCategories])];
 
   // Get Firebase ID token for authenticated API requests
   const getAuthHeaders = useCallback(async (): Promise<Record<string, string>> => {
@@ -359,19 +367,67 @@ export default function AdminPage() {
                   <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-2">
                     Category *
                   </label>
-                  <select
-                    value={formData.category}
-                    onChange={(e) =>
-                      setFormData({ ...formData, category: e.target.value })
-                    }
-                    className="w-full px-4 py-3 border border-gray-200 text-sm focus:outline-none focus:border-brand bg-white"
-                  >
-                    {["Jackets", "Hoodies", "T-Shirts", "Pants"].map((cat) => (
-                      <option key={cat} value={cat}>
-                        {cat}
-                      </option>
-                    ))}
-                  </select>
+                  <div className="flex gap-2">
+                    <select
+                      value={formData.category}
+                      onChange={(e) =>
+                        setFormData({ ...formData, category: e.target.value })
+                      }
+                      className="flex-1 px-4 py-3 border border-gray-200 text-sm focus:outline-none focus:border-brand bg-white"
+                    >
+                      {allCategories.map((cat) => (
+                        <option key={cat} value={cat}>
+                          {cat}
+                        </option>
+                      ))}
+                    </select>
+                    <button
+                      type="button"
+                      onClick={() => setShowNewCategoryInput(!showNewCategoryInput)}
+                      className="px-3 py-3 border border-gray-200 text-sm text-brand hover:border-brand transition-colors shrink-0"
+                      title="Add new category"
+                    >
+                      + New
+                    </button>
+                  </div>
+                  {showNewCategoryInput && (
+                    <div className="flex gap-2 mt-2">
+                      <input
+                        type="text"
+                        value={newCategory}
+                        onChange={(e) => setNewCategory(e.target.value)}
+                        placeholder="New category name"
+                        className="flex-1 px-4 py-2 border border-gray-200 text-sm focus:outline-none focus:border-brand"
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter") {
+                            e.preventDefault();
+                            if (newCategory.trim() && !allCategories.includes(newCategory.trim())) {
+                              const cat = newCategory.trim();
+                              setCustomCategories((prev) => [...prev, cat]);
+                              setFormData({ ...formData, category: cat });
+                              setNewCategory("");
+                              setShowNewCategoryInput(false);
+                            }
+                          }
+                        }}
+                      />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (newCategory.trim() && !allCategories.includes(newCategory.trim())) {
+                            const cat = newCategory.trim();
+                            setCustomCategories((prev) => [...prev, cat]);
+                            setFormData({ ...formData, category: cat });
+                            setNewCategory("");
+                            setShowNewCategoryInput(false);
+                          }
+                        }}
+                        className="px-4 py-2 bg-brand text-white text-sm font-medium hover:bg-brand-light transition-colors"
+                      >
+                        Add
+                      </button>
+                    </div>
+                  )}
                 </div>
               </div>
 
