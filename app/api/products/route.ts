@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { generateSlug } from "@/lib/utils";
 import { verifyAuth } from "@/lib/auth";
+
+function revalidateProducts() {
+  revalidatePath("/", "layout");
+}
 
 // GET all products
 export async function GET() {
@@ -41,6 +46,7 @@ export async function POST(request: NextRequest) {
       },
     });
 
+    revalidateProducts();
     return NextResponse.json(product, { status: 201 });
   } catch (error) {
     console.error("Failed to add product:", error);
@@ -75,6 +81,7 @@ export async function PUT(request: NextRequest) {
       },
     });
 
+    revalidateProducts();
     return NextResponse.json(product);
   } catch (error) {
     console.error("Failed to update product:", error);
@@ -97,6 +104,7 @@ export async function DELETE(request: NextRequest) {
       where: { id: body.id },
     });
 
+    revalidateProducts();
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Failed to delete product:", error);
